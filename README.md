@@ -35,7 +35,7 @@ A modern, responsive website for GreenCo Gas & Accessories - Zimbabwe's reliable
 
 - **Phone**: +263 717 539 842
 - **Email**: info@greencogas.com
-- **Location**: Harare, Zimbabwe
+- **Location**: 12 Coull Drive, Mt Pleasant, Harare
 - **WhatsApp**: [Click to chat](https://wa.me/263717539842)
 
 ## 🎨 Design Features
