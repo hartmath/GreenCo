@@ -33,10 +33,10 @@ A modern, responsive website for GreenCo Gas & Accessories - Zimbabwe's reliable
 
 ## 📞 Contact Information
 
-- **Phone**: +263 773 362 029
+- **Phone**: +263 717 539 842
 - **Email**: info@greencogas.com
 - **Location**: Harare, Zimbabwe
-- **WhatsApp**: [Click to chat](https://wa.me/263773362029)
+- **WhatsApp**: [Click to chat](https://wa.me/263717539842)
 
 ## 🎨 Design Features
 
@@ -137,7 +137,7 @@ This is a static website that can be deployed to any web hosting service:
 
 For technical support or questions about this website, please contact:
 - **Email**: info@greencogas.com
-- **Phone**: +263 773 362 029
+- **Phone**: +263 717 539 842
 
 ---
 
