@@ -227,6 +227,124 @@ document.querySelectorAll('.gas-card, .accessory-item, .installation-card').forE
     });
 });
 
+// Certificate viewer function
+function openCertificate() {
+    // Create a modal overlay
+    const modal = document.createElement('div');
+    modal.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+        cursor: pointer;
+    `;
+    
+    // Create the image container
+    const imageContainer = document.createElement('div');
+    imageContainer.style.cssText = `
+        max-width: 90%;
+        max-height: 90%;
+        position: relative;
+    `;
+    
+    // Create the certificate image
+    const certificateImg = document.createElement('img');
+    certificateImg.src = 'WhatsApp Image 2025-10-01 at 19.25.08_a03320bc.jpg';
+    certificateImg.alt = 'GreenCo Gas & Accessories Certificate of Incorporation';
+    certificateImg.style.cssText = `
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        cursor: default;
+    `;
+    
+    // Create close button
+    const closeBtn = document.createElement('button');
+    closeBtn.innerHTML = '×';
+    closeBtn.style.cssText = `
+        position: absolute;
+        top: -15px;
+        right: -15px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #e74c3c;
+        color: white;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+    `;
+    
+    // Add hover effect to close button
+    closeBtn.addEventListener('mouseenter', () => {
+        closeBtn.style.background = '#c0392b';
+        closeBtn.style.transform = 'scale(1.1)';
+    });
+    
+    closeBtn.addEventListener('mouseleave', () => {
+        closeBtn.style.background = '#e74c3c';
+        closeBtn.style.transform = 'scale(1)';
+    });
+    
+    // Close modal function
+    function closeModal() {
+        document.body.removeChild(modal);
+        document.body.style.overflow = 'auto';
+    }
+    
+    // Event listeners
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+    
+    // Prevent image click from closing modal
+    certificateImg.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
+    
+    // Keyboard support
+    const handleKeyPress = (e) => {
+        if (e.key === 'Escape') {
+            closeModal();
+            document.removeEventListener('keydown', handleKeyPress);
+        }
+    };
+    
+    // Assemble modal
+    imageContainer.appendChild(certificateImg);
+    imageContainer.appendChild(closeBtn);
+    modal.appendChild(imageContainer);
+    
+    // Add to page and prevent body scroll
+    document.body.appendChild(modal);
+    document.body.style.overflow = 'hidden';
+    document.addEventListener('keydown', handleKeyPress);
+    
+    // Add loading state
+    certificateImg.onload = () => {
+        certificateImg.style.opacity = '0';
+        certificateImg.style.transition = 'opacity 0.3s ease';
+        setTimeout(() => {
+            certificateImg.style.opacity = '1';
+        }, 100);
+    };
+}
+
 // Console welcome message
 console.log('%c🌱 Welcome to GreenCo Gas & Accessories!', 'color: #2d5a27; font-size: 16px; font-weight: bold;');
 console.log('%cReliable Gas Supply Across Zimbabwe', 'color: #4a7c59; font-size: 12px;');

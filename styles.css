@@ -608,6 +608,37 @@ section {
     color: #333;
 }
 
+/* Certificate Button */
+.certificate-button-container {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.btn-certificate {
+    background: linear-gradient(135deg, #2d5a27 0%, #4a7c59 100%);
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 5px 15px rgba(45, 90, 39, 0.3);
+}
+
+.btn-certificate:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(45, 90, 39, 0.4);
+    background: linear-gradient(135deg, #1e3f1a 0%, #3a6b47 100%);
+}
+
+.btn-certificate i {
+    font-size: 1.2rem;
+}
+
 /* Contact Section */
 .contact {
     background: linear-gradient(135deg, #2d5a27 0%, #4a7c59 100%);
