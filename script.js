@@ -347,4 +347,4 @@ function openCertificate() {
 
 // Console welcome message
 console.log('%c🌱 Welcome to GreenCo Gas & Accessories!', 'color: #2d5a27; font-size: 16px; font-weight: bold;');
-console.log('%cReliable Gas Supply Across Zimbabwe', 'color: #4a7c59; font-size: 12px;');
+console.log('%cHarare\'s Trusted Source for Reliable Gas', 'color: #4a7c59; font-size: 12px;');
